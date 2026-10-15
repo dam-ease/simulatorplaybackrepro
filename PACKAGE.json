@@ -1,0 +1,96 @@
+{
+  "format_version": 1,
+  "name": "SimulatorPlaybackRepro",
+  "prepared_date": "2026-10-14",
+  "purpose": "Standalone support reproduction for iOS 26.5 simulator launch/readiness failures",
+  "original_source_commit": "3f4e2f8f55b97f6878b340d62c8247f613241141",
+  "original_repository_source_digest": "b45f98007e4e59210ba1f0dfba37493bacdb95c763a829282df7e6edd4a032ed",
+  "original_source_tree": "05f669e3eb0ac82ccc15de5ac2d9c1844495f3ba",
+  "observed_build_ids": {
+    "fresh_26_6_launch_timeout": "6acf6cf9546ce6236cee7db6",
+    "preinstalled_26_6_launch_timeout": "6aceeb7b546ce6236cee5db7",
+    "preinstalled_26_5_readiness_failure": "6acedc35546ce6236cee5ab5"
+  },
+  "local_validation": {
+    "original_files_verified_unchanged": 6,
+    "standalone_wrapper_tests_passed": 6,
+    "python_syntax_passed": true,
+    "yaml_and_bash_syntax_passed": true,
+    "generated_probe_metadata_matches_run_10": true,
+    "new_standalone_wrapper_executed_on_mac": false,
+    "new_codemagic_job_started": false
+  },
+  "packaging_changes": [
+    "New run.py supplies standalone source identity and invokes the unchanged runners.",
+    "New manual-only YAML removes application repository, release, CocoaPods and signing requirements.",
+    "The plan JSON contains only simulator_runtime, the sole setting read by the unchanged playback runner."
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 8342,
+      "sha256": "50b5cb42b714f1bf4fa907a8082088bd516f05426463538ce92f9b9c3b19639b",
+      "original_build_bytes_unchanged": false
+    },
+    {
+      "path": "Release/codemagic-focused-recheck.json",
+      "bytes": 34,
+      "sha256": "5e59cdcd2aded34428652baa64a58561f6521318f1321163ce7f25627d20d393",
+      "original_build_bytes_unchanged": false
+    },
+    {
+      "path": "Stall/Resources/fullscreen-check.mp4",
+      "bytes": 251409,
+      "sha256": "acd41b0a213c646eec90b449bfb5bbc7c1a9d24cdd62bfb001dc59619a642a30",
+      "original_build_bytes_unchanged": true,
+      "original_git_blob_sha1": "7b4dd848ecf2510818f130f35b42ad005aa387d9"
+    },
+    {
+      "path": "Tools/media_fixture_preflight.swift",
+      "bytes": 13721,
+      "sha256": "83c0ecd180938dc15e638b757a232505564bcd749f55f89389d447b88f853ef8",
+      "original_build_bytes_unchanged": true,
+      "original_git_blob_sha1": "3d2debf4764abc099f1c455979b2ce339c5a9884"
+    },
+    {
+      "path": "Tools/run_media_fixture_preflight.py",
+      "bytes": 6489,
+      "sha256": "0e98829f33497d8fa7008367624f9c9502b76aaacd39b4478fec2b9713f6e82c",
+      "original_build_bytes_unchanged": true,
+      "original_git_blob_sha1": "f6a9bfdc5a7d1e7a4be253b53021c1c95e6bf90f"
+    },
+    {
+      "path": "Tools/run_simulator_playback_preflight.py",
+      "bytes": 20169,
+      "sha256": "bbd1b03be6abfe99e2a8f2dc5ad5c7a12a64d30c1e94995bd39d86bdcbb33841",
+      "original_build_bytes_unchanged": true,
+      "original_git_blob_sha1": "e8e739fd9746e4913e12c4ffb2bc11fe7ef48bb2"
+    },
+    {
+      "path": "Tools/select_simulator.py",
+      "bytes": 1308,
+      "sha256": "0f9b23fc641f3ded2d612c06818111ad63649f08fd5a9d5986deaf66715e28c6",
+      "original_build_bytes_unchanged": true,
+      "original_git_blob_sha1": "81ac0f83e4f43cc7d449298a367c03935652d033"
+    },
+    {
+      "path": "Tools/simulator_playback_probe.swift",
+      "bytes": 6885,
+      "sha256": "4708167e9f034f52111cbcb9aee9e30d7c72ae957fe93b08f28cc7f0a57ec7a5",
+      "original_build_bytes_unchanged": true,
+      "original_git_blob_sha1": "158e135e933af75b779d80f44b4a84e5c2544dc1"
+    },
+    {
+      "path": "codemagic.yaml",
+      "bytes": 1021,
+      "sha256": "e216f0f8f4d8f559311951af332278eea5e973064daf700548afeb2c3582c0fd",
+      "original_build_bytes_unchanged": false
+    },
+    {
+      "path": "run.py",
+      "bytes": 5621,
+      "sha256": "49b7a8ae39ad883ac86f7906dc4397098f45aa067b4e08aac620c362b2f3d2f7",
+      "original_build_bytes_unchanged": false
+    }
+  ]
+}

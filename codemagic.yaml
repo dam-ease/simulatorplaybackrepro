@@ -1,0 +1,32 @@
+# Standalone support sample. Manual workflows only; no signing or publishing.
+workflows:
+  reproduce-26-6-launch:
+    name: Support sample - Xcode 26.6 fresh iOS 26.5
+    instance_type: mac_mini_m2
+    max_build_duration: 5
+    environment:
+      xcode: "26.6"
+    scripts:
+      - name: Compile standalone probes and check fresh simulator playback
+        script: |
+          #!/bin/bash
+          set -euo pipefail
+          python3 run.py --simulator fresh --expect-xcode 26.6
+    artifacts: &probe_artifacts
+      - build/*.json
+      - build/*.txt
+      - build/*.log
+
+  reproduce-26-5-readiness:
+    name: Support sample - Xcode 26.5 preinstalled iOS 26.5
+    instance_type: mac_mini_m2
+    max_build_duration: 5
+    environment:
+      xcode: "26.5"
+    scripts:
+      - name: Compile standalone probes and check preinstalled simulator playback
+        script: |
+          #!/bin/bash
+          set -euo pipefail
+          python3 run.py --simulator preinstalled --expect-xcode 26.5
+    artifacts: *probe_artifacts
