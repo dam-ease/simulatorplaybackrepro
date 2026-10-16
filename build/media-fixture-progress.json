@@ -1,0 +1,36 @@
+{
+  "audio_channels" : 2,
+  "audio_decoded_buffers" : 85,
+  "audio_preview_frames" : 24000,
+  "audio_preview_nonzero" : true,
+  "audio_sample_rate" : 48000,
+  "duration_seconds" : 12.005333333333333,
+  "host_audio" : {
+    "default_input" : 79,
+    "default_output" : 72,
+    "default_output_repaired" : false,
+    "devices" : [
+      {
+        "alive" : true,
+        "built_in" : true,
+        "id" : 79,
+        "output_channels" : 0
+      },
+      {
+        "alive" : true,
+        "built_in" : true,
+        "id" : 72,
+        "output_channels" : 2
+      }
+    ],
+    "host_output_valid" : true,
+    "old_default_output" : 72,
+    "physical_sound_verified" : false
+  },
+  "ios_readiness_verified" : false,
+  "passed" : true,
+  "platform" : "macOS-host",
+  "playback_verified" : false,
+  "stage" : "decoded-fixture-and-audio-preview",
+  "video_decoded_buffers" : 180
+}

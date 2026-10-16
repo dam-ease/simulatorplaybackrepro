@@ -23,13 +23,14 @@
   "packaging_changes": [
     "New run.py supplies standalone source identity and invokes the unchanged runners.",
     "New manual-only YAML removes application repository, release, CocoaPods and signing requirements.",
-    "The plan JSON contains only simulator_runtime, the sole setting read by the unchanged playback runner."
+    "The plan JSON contains only simulator_runtime, the sole setting read by the unchanged playback runner.",
+    "Local adaptation: explicit Xcode/runtime arguments and playback runtime environment override; see README."
   ],
   "files": [
     {
       "path": "README.md",
-      "bytes": 8342,
-      "sha256": "50b5cb42b714f1bf4fa907a8082088bd516f05426463538ce92f9b9c3b19639b",
+      "bytes": 8940,
+      "sha256": "2cf7c5f7a70cc1b06df3b0d34e5277a26176bb0f0fea1d9dc64359168a78f31b",
       "original_build_bytes_unchanged": false
     },
     {
@@ -61,9 +62,9 @@
     },
     {
       "path": "Tools/run_simulator_playback_preflight.py",
-      "bytes": 20169,
-      "sha256": "bbd1b03be6abfe99e2a8f2dc5ad5c7a12a64d30c1e94995bd39d86bdcbb33841",
-      "original_build_bytes_unchanged": true,
+      "bytes": 20265,
+      "sha256": "efd6508e3a61cd7868101a3dcf3634a4f0a714752b320fc4b41c60e2a25bc332",
+      "original_build_bytes_unchanged": false,
       "original_git_blob_sha1": "e8e739fd9746e4913e12c4ffb2bc11fe7ef48bb2"
     },
     {
@@ -88,8 +89,8 @@
     },
     {
       "path": "run.py",
-      "bytes": 5621,
-      "sha256": "49b7a8ae39ad883ac86f7906dc4397098f45aa067b4e08aac620c362b2f3d2f7",
+      "bytes": 6112,
+      "sha256": "4cdfbd1b353ce295304f4f30adf5a4c24a7ea32b0fd72e84d465860d06e61214",
       "original_build_bytes_unchanged": false
     }
   ]

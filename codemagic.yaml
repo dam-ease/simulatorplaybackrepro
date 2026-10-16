@@ -30,3 +30,17 @@ workflows:
           set -euo pipefail
           python3 run.py --simulator preinstalled --expect-xcode 26.5
     artifacts: *probe_artifacts
+
+  reproduce-26-4-readiness:
+    name: Support sample - Xcode 26.4 preinstalled iOS 26.4
+    instance_type: mac_mini_m2
+    max_build_duration: 5
+    environment:
+      xcode: "26.4"
+    scripts:
+      - name: Compile standalone probes and check preinstalled simulator playback
+        script: |
+          #!/bin/bash
+          set -euo pipefail
+          python3 run.py --simulator preinstalled --expect-xcode 26.4
+    artifacts: *probe_artifacts

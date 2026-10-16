@@ -166,6 +166,7 @@ def main():
     log = build / 'simulator-playback-setup.log'
     identity = json.loads((build / 'MAC-SOURCE-IDENTITY.json').read_text())
     plan = json.loads((ROOT / 'Release/codemagic-focused-recheck.json').read_text())
+    plan['simulator_runtime'] = os.environ.get('STALL_SIMULATOR_OS', plan['simulator_runtime'])
     result = {'passed': False, 'source_commit': identity['source_commit'], 'source_digest': identity['source_digest'],
               'runtime': plan['simulator_runtime'], 'physical_sound_verified': False,
               'app_tests_passed': False, 'release_hold': True, 'signed': False, 'apple_upload_performed': False}

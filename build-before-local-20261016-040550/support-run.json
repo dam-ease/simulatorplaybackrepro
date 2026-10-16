@@ -1,0 +1,10 @@
+{
+  "passed": false,
+  "stage": "check-toolchain",
+  "simulator_source": "preinstalled",
+  "expected_xcode": "26.5",
+  "package_manifest_sha256": "56d3264fd99f22715e650fcce78242b0040629fe2b807459038052b95844ee83",
+  "error": "Selected Xcode does not match --expect-xcode: Xcode 26.4.1\nBuild version 17E202",
+  "error_type": "ValueError",
+  "elapsed_seconds": 0.252
+}

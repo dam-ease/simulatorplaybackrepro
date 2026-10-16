@@ -1,0 +1,33 @@
+{
+  "CFBundleIdentifier": "com.danielchampion.adblockcastbrowser.playback-probe",
+  "CFBundleExecutable": "SimulatorPlaybackProbe",
+  "CFBundleName": "Playback Probe",
+  "CFBundlePackageType": "APPL",
+  "CFBundleVersion": "1",
+  "CFBundleShortVersionString": "1.0",
+  "CFBundleInfoDictionaryVersion": "6.0",
+  "CFBundleSupportedPlatforms": [
+    "iPhoneSimulator"
+  ],
+  "MinimumOSVersion": "18.0",
+  "UIDeviceFamily": [
+    1,
+    2
+  ],
+  "UILaunchScreen": {},
+  "UISupportedInterfaceOrientations": [
+    "UIInterfaceOrientationPortrait",
+    "UIInterfaceOrientationLandscapeLeft",
+    "UIInterfaceOrientationLandscapeRight"
+  ],
+  "UISupportedInterfaceOrientations~ipad": [
+    "UIInterfaceOrientationPortrait",
+    "UIInterfaceOrientationPortraitUpsideDown",
+    "UIInterfaceOrientationLandscapeLeft",
+    "UIInterfaceOrientationLandscapeRight"
+  ],
+  "UIBackgroundModes": [
+    "audio"
+  ],
+  "AVInitialRouteSharingPolicy": "LongFormVideo"
+}

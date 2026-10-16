@@ -138,3 +138,17 @@ metadata identity. **The standalone wrapper has not been executed on a Mac.**
 The unchanged probes did compile in the cited original builds; their runtime
 failures are recorded above. No new Codemagic build was started to prepare this
 sample. No real simulator playback pass is claimed.
+
+## Local comparison with Xcode 26.4.1
+
+This adapted package also accepts explicit toolchain and runtime versions. For
+the installed Xcode 26.4.1 and iOS 26.4.1 runtime (identifier `iOS-26-4`):
+
+```bash
+python3 run.py --simulator fresh --expect-xcode 26.4.1 --simulator-os 26.4
+```
+
+Preserve or rename an existing `build/` before running again. This comparison
+uses different versions from the Codemagic failures. The reports record the
+actual Xcode and runtime identifier. Existing Codemagic defaults remain 26.6/26.5.
+The playback runner now reads the runtime override from `STALL_SIMULATOR_OS`.

@@ -1,0 +1,20 @@
+{
+  "audio_track_count": 1,
+  "elapsed_seconds": 0.342232667,
+  "finished": true,
+  "item_status": 1,
+  "media_error": "none",
+  "output_channels": 2,
+  "passed": true,
+  "paused_ready": true,
+  "physical_sound_verified": false,
+  "player_status": 1,
+  "route": [
+    "Speaker:Speaker"
+  ],
+  "sample_rate": 48000,
+  "schema": 1,
+  "stage": "completed",
+  "time_control_status": 2,
+  "validation_run_id": "5f908ed9d7a74d0590caca280390b46d"
+}
