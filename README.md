@@ -158,3 +158,9 @@ For the `reproduce-26-4-readiness` Codemagic workflow, both versions are explici
 `--expect-xcode 26.4 --simulator-os 26.4`. Omitting `--simulator-os` keeps the
 original iOS 26.5 default. Changes to `codemagic.yaml` do not require regenerating
 package checksums. Commit `PACKAGE.json` together with these changes.
+
+Codemagic workflows preserve any existing `build/` under a unique
+`previous-builds/run-*/build/` directory before starting the probe. This also
+handles previously committed build output. Current and archived JSON, text,
+and log reports are included in CI artifacts. `.gitignore` excludes new build
+output; files already tracked by Git remain tracked.

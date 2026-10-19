@@ -11,11 +11,19 @@ workflows:
         script: |
           #!/bin/bash
           set -euo pipefail
+          if [ -e build ]; then
+            mkdir -p previous-builds
+            archive_dir=$(mktemp -d previous-builds/run-XXXXXXXX)
+            mv build "$archive_dir/build"
+          fi
           python3 run.py --simulator fresh --expect-xcode 26.6
     artifacts: &probe_artifacts
       - build/*.json
       - build/*.txt
       - build/*.log
+      - previous-builds/run-*/build/*.json
+      - previous-builds/run-*/build/*.txt
+      - previous-builds/run-*/build/*.log
 
   reproduce-26-5-readiness:
     name: Support sample - Xcode 26.5 preinstalled iOS 26.5
@@ -28,6 +36,11 @@ workflows:
         script: |
           #!/bin/bash
           set -euo pipefail
+          if [ -e build ]; then
+            mkdir -p previous-builds
+            archive_dir=$(mktemp -d previous-builds/run-XXXXXXXX)
+            mv build "$archive_dir/build"
+          fi
           python3 run.py --simulator preinstalled --expect-xcode 26.5
     artifacts: *probe_artifacts
 
@@ -42,5 +55,10 @@ workflows:
         script: |
           #!/bin/bash
           set -euo pipefail
+          if [ -e build ]; then
+            mkdir -p previous-builds
+            archive_dir=$(mktemp -d previous-builds/run-XXXXXXXX)
+            mv build "$archive_dir/build"
+          fi
           python3 run.py --simulator preinstalled --expect-xcode 26.4 --simulator-os 26.4
     artifacts: *probe_artifacts
