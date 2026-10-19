@@ -24,13 +24,14 @@
     "New run.py supplies standalone source identity and invokes the unchanged runners.",
     "New manual-only YAML removes application repository, release, CocoaPods and signing requirements.",
     "The plan JSON contains only simulator_runtime, the sole setting read by the unchanged playback runner.",
-    "Local adaptation: explicit Xcode/runtime arguments and playback runtime environment override; see README."
+    "Local adaptation: explicit Xcode/runtime arguments and playback runtime environment override; see README.",
+    "codemagic.yaml is editable CI configuration and is excluded from package integrity checks; probe source and fixture checks remain enforced."
   ],
   "files": [
     {
       "path": "README.md",
-      "bytes": 8940,
-      "sha256": "2cf7c5f7a70cc1b06df3b0d34e5277a26176bb0f0fea1d9dc64359168a78f31b",
+      "bytes": 9317,
+      "sha256": "c830351b9fadece25b3651222732702f693206dce33a4bb6ababffe4555e9e91",
       "original_build_bytes_unchanged": false
     },
     {
@@ -80,12 +81,6 @@
       "sha256": "4708167e9f034f52111cbcb9aee9e30d7c72ae957fe93b08f28cc7f0a57ec7a5",
       "original_build_bytes_unchanged": true,
       "original_git_blob_sha1": "158e135e933af75b779d80f44b4a84e5c2544dc1"
-    },
-    {
-      "path": "codemagic.yaml",
-      "bytes": 1021,
-      "sha256": "e216f0f8f4d8f559311951af332278eea5e973064daf700548afeb2c3582c0fd",
-      "original_build_bytes_unchanged": false
     },
     {
       "path": "run.py",

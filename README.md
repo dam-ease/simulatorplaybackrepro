@@ -67,7 +67,8 @@ python3 run.py --check-only
 
 Each native run writes `build/`. The script refuses to overwrite an existing
 `build/` directory. Preserve/rename it or unpack a clean copy before another run.
-The manifest check also rejects modified source; if support deliberately edits
+The manifest check excludes the editable `codemagic.yaml` CI configuration but
+still rejects modified source; if support deliberately edits
 a listed file, update that file's SHA-256 entry in `PACKAGE.json` and retain the
 diff so the changed experiment is distinguishable.
 
@@ -152,3 +153,8 @@ Preserve or rename an existing `build/` before running again. This comparison
 uses different versions from the Codemagic failures. The reports record the
 actual Xcode and runtime identifier. Existing Codemagic defaults remain 26.6/26.5.
 The playback runner now reads the runtime override from `STALL_SIMULATOR_OS`.
+
+For the `reproduce-26-4-readiness` Codemagic workflow, both versions are explicit:
+`--expect-xcode 26.4 --simulator-os 26.4`. Omitting `--simulator-os` keeps the
+original iOS 26.5 default. Changes to `codemagic.yaml` do not require regenerating
+package checksums. Commit `PACKAGE.json` together with these changes.
