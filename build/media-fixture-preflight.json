@@ -8,7 +8,7 @@
   "stage": "completed",
   "fixture_sha256": "acd41b0a213c646eec90b449bfb5bbc7c1a9d24cdd62bfb001dc59619a642a30",
   "audio_channels": 2,
-  "audio_decoded_buffers": 85,
+  "audio_decoded_buffers": 79,
   "audio_preview_frames": 24000,
   "audio_preview_nonzero": true,
   "audio_sample_rate": 48000,
@@ -36,5 +36,5 @@
     "physical_sound_verified": false
   },
   "video_decoded_buffers": 180,
-  "host_output_elapsed_seconds": 0.712
+  "host_output_elapsed_seconds": 0.94
 }

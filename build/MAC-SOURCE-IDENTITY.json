@@ -1,6 +1,6 @@
 {
   "source_commit": "standalone-support-package",
-  "source_digest": "42f61e00d61d1357825f610dfab59f6a7eb041bf2953ce1f211f534f4f2362ec",
+  "source_digest": "ab545ab6935737a765eed4fedccc66406749be3146e8fd66bca4e0d26c0f492c",
   "source_digest_scope": "SHA256 of PACKAGE.json, after verifying every listed file",
   "original_build_source_commit": "3f4e2f8f55b97f6878b340d62c8247f613241141",
   "original_repository_source_digest": "b45f98007e4e59210ba1f0dfba37493bacdb95c763a829282df7e6edd4a032ed",
@@ -10,9 +10,9 @@
   "host_macos_build": "25E253",
   "xcode": "Xcode 26.4.1\nBuild version 17E202",
   "architecture": "arm64",
-  "simulator_source_requested": "fresh",
+  "simulator_source_requested": "preinstalled",
   "simulator_runtime": "26.4",
-  "preflight_started_monotonic": 221000.133969875,
+  "preflight_started_monotonic": 349594.400549541,
   "release_hold": true,
   "signed": false,
   "apple_upload_performed": false

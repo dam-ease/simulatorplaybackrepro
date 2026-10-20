@@ -1,6 +1,6 @@
 {
   "audio_channels" : 2,
-  "audio_decoded_buffers" : 85,
+  "audio_decoded_buffers" : 79,
   "audio_preview_frames" : 24000,
   "audio_preview_nonzero" : true,
   "audio_sample_rate" : 48000,

@@ -1,9 +1,9 @@
 {
   "passed": true,
   "stage": "completed",
-  "simulator_source": "fresh",
-  "expected_xcode": "26.4.1",
+  "simulator_source": "preinstalled",
+  "expected_xcode": "26.4",
   "requested_simulator_runtime": "26.4",
-  "package_manifest_sha256": "42f61e00d61d1357825f610dfab59f6a7eb041bf2953ce1f211f534f4f2362ec",
-  "elapsed_seconds": 80.676
+  "package_manifest_sha256": "ab545ab6935737a765eed4fedccc66406749be3146e8fd66bca4e0d26c0f492c",
+  "elapsed_seconds": 70.851
 }
