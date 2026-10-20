@@ -94,15 +94,23 @@ def main(argv=None):
         run([sys.executable, 'Tools/run_media_fixture_preflight.py'], 100)
         outcome['stage'] = 'select-simulator-template'
         save()
-        inventory = run(['xcrun', 'simctl', 'list', 'devices', 'available'], 25, capture=True).stdout
+        inventory = run(['xcrun', 'simctl', 'list', 'devices', 'available'], 60, capture=True).stdout
         (build / 'simulators.txt').write_text(inventory)
-        selected = run([sys.executable, 'Tools/select_simulator.py', '--os', args.simulator_os], 25, capture=True).stdout
+        selected = run([sys.executable, 'Tools/select_simulator.py', '--os', args.simulator_os], 60, capture=True).stdout
         (build / 'native-simulator.txt').write_text(selected.strip() + '\n')
         outcome['stage'] = 'simulator-playback'
         save()
         run([sys.executable, 'Tools/run_simulator_playback_preflight.py'], 290)
         outcome.update(passed=True, stage='completed')
     except Exception as error:
+        if isinstance(error, subprocess.TimeoutExpired):
+            outcome['timed_out_command'] = error.cmd
+            outcome['command_timeout_seconds'] = error.timeout
+            for label, output in (('stdout', error.stdout), ('stderr', error.stderr)):
+                if output:
+                    if isinstance(output, bytes):
+                        output = output.decode('utf-8', errors='replace')
+                    (build / ('timeout-' + label + '.log')).write_text(output)
         outcome.update(error=str(error), error_type=type(error).__name__)
     finally:
         outcome['elapsed_seconds'] = round(time.monotonic() - started, 3)

@@ -164,3 +164,10 @@ Codemagic workflows preserve any existing `build/` under a unique
 handles previously committed build output. Current and archived JSON, text,
 and log reports are included in CI artifacts. `.gitignore` excludes new build
 output; files already tracked by Git remain tracked.
+
+Simulator inventory and template selection each allow up to 60 seconds for
+CoreSimulator startup on CI. These steps remain subject to the wrapper's
+295-second overall limit and the five-minute Codemagic limit. A timeout records
+the command, time limit, and any captured output in `build/timeout-*.log`. This
+changes inventory preparation limits only; playback pass requirements and
+launch/boot limits remain unchanged.

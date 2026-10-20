@@ -25,13 +25,14 @@
     "New manual-only YAML removes application repository, release, CocoaPods and signing requirements.",
     "The plan JSON contains only simulator_runtime, the sole setting read by the unchanged playback runner.",
     "Local adaptation: explicit Xcode/runtime arguments and playback runtime environment override; see README.",
-    "codemagic.yaml is editable CI configuration and is excluded from package integrity checks; probe source and fixture checks remain enforced."
+    "codemagic.yaml is editable CI configuration and is excluded from package integrity checks; probe source and fixture checks remain enforced.",
+    "Allow 60 seconds for wrapper simulator inventory/selection and retain timeout command/output; total wrapper limit remains 295 seconds."
   ],
   "files": [
     {
       "path": "README.md",
-      "bytes": 9669,
-      "sha256": "5387ea713873ad41ba76f3f83c0fb5f788f76235d5c151869ba74a58084060e4",
+      "bytes": 10089,
+      "sha256": "81b766191b726ff0e9d9657d5b5239d66c537daad5abd8ff7720d3c025796c65",
       "original_build_bytes_unchanged": false
     },
     {
@@ -84,8 +85,8 @@
     },
     {
       "path": "run.py",
-      "bytes": 6112,
-      "sha256": "4cdfbd1b353ce295304f4f30adf5a4c24a7ea32b0fd72e84d465860d06e61214",
+      "bytes": 6602,
+      "sha256": "5a817b43508323c06a0d4b5bcf441cd2cbe57e47cbd8b16afbdeeff79d268f57",
       "original_build_bytes_unchanged": false
     }
   ]
